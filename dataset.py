@@ -56,7 +56,7 @@ class DeepCrackDataset(Dataset):
 
         # To numpy
         img = np.array(img, dtype=np.float32) / 255.0  # (H, W, 3)
-        mask = np.array(mask, dtype=np.uint8)          # (H, W), values 0/255 (expected)
+        mask = np.array(mask, dtype=np.uint8)          # (H, W), values 0/255
 
         # Binarize: crack=1 if >0 (covers 255 or any nonzero)
         mask = (mask > 0).astype(np.uint8)

@@ -38,7 +38,7 @@ def main():
     assert len(test_imgs) > 0 and len(test_msks) > 0, "No test files found"
 
     # -------------------------
-    # Mask value check (sanity)
+    # Mask value check
     # -------------------------
     m = np.array(Image.open(train_msks[0]).convert("L"))
     print("Unique values in a sample mask:", np.unique(m))
